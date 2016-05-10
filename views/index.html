@@ -2,111 +2,120 @@
 
 {% block content %}
 
-    <!-- Map -->
     <div class="container">
-        <div class='row'>
-            <div class='col-lg-8 map'>
-                Map Placeholder</div>
-        </div>
-    </div>
-    <div class='container sidebar'>
-        <div class='row'>
-            <div class='container col-lg-4 options-panel'>
-                <label for="hotels">Hotels</label>
-                <select id="hotels" name="Hotels">
-                    {% for hotel in hotels %}
-                        <option value="{{hotel.name}}">{{hotel.name}}</option>
-                    {% endfor %}
-                </select>
-
-                <label for="restaurants">Restaurants</label>
-                <select id="restaurants" name="Restaurants">
-                    {% for restaurant in restaurants %}
-                        <option value="{{restaurant.name}}">{{restaurant.name}}</option>
-                    {% endfor %}
-                </select>
-                <br>
-                <label for="activities">Activities</label>
-                <select id="activities" name="Activities">
-                    {% for activity in activities %}
-                        <option value="{{activity.name}}">{{activity.name}}</option>
-                    {% endfor %}
-                </select>
+        <div class="row">
+            <!-- MAP CONTAINER -->
+            <div class="container col-lg-8 map">
+                Map Placeholder
             </div>
-        </div>
-        <div class='row'>
-            <div class="container col-lg-4  itinerary-container">
+
+            <!-- SIDEBAR CONTAINER -->
+            <div class='container col-lg-4 sidebar'>
                 <div class='row'>
-                    <div class="day-btns col-lg-12 btn-toolbar" role="toolbar">
-                        <div class="btn-group">
-                            <!-- TODO: These need to be dynamic -->
-                            <button type="button" class="btn btn-default">1</button>
-                            <button type="button" class="btn btn-default">2</button>
-                            <button type="button" class="btn btn-default">3</button>
-                        </div>
-                        <button id="add-day-btn" class="btn btn-default">
-                            <span class="glyphicon glyphicon-plus"></span>
-                        </button>
+                    <!-- OPTIONS SELECTOR PANEL -->
+                    <div class='container col-lg-12 options-panel'>
+                        <label for="hotels">Hotels</label>
+                        <select id="hotels" name="Hotels">
+                            {% for hotel in hotels %}
+                                <option value="{{hotel.name}}">{{hotel.name}}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label for="restaurants">Restaurants</label>
+                        <select id="restaurants" name="Restaurants">
+                            {% for restaurant in restaurants %}
+                                <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label for="activities">Activities</label>
+                        <select id="activities" name="Activities">
+                            {% for activity in activities %}
+                                <option value="{{activity.name}}">{{activity.name}}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
                 <div class='row'>
-                    <div class="col-lg-12 itinerary" role="toolbar">
-                        <div class="itinerary-item">
-                            <h4>My Hotel</h4>
-                            <ul class="itinerary-item-list">
-                                <li>
-                                    Hotel Whatever
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                            </ul>
+                    <!-- ITINERARY CONTAINER -->
+                    <div class="container col-lg-12 itinerary-container">
+                        <div class='row'>
+                            <!-- DAY SELECTION BUTTONS TOOLBAR -->
+                            <div class="day-btns btn-toolbar">
+                                <div class="btn-group">
+                                    <!-- TODO: These need to be dynamic -->
+                                    <button type="button" class="btn btn-default">1</button>
+                                    <button type="button" class="btn btn-default">2</button>
+                                    <button type="button" class="btn btn-default">3</button>
+                                </div>
+                                <button id="add-day-btn" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="itinerary-item">
-                            <h4>My Restaurants</h4>
-                            <ul class="itinerary-item-list">
-                                <li>
-                                    Potato Emporium
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                                <li>
-                                    Chips and Stuff
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="itinerary-item">
-                            <h4>My Activities</h4>
-                            <ul class="itinerary-item-list">
-                                <li>
-                                    Snortkelling
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                                <li>
-                                    Doing Laudnry
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                                <li>
-                                    Meditating
-                                    <button class="btn btn-default">
-                                        <span class="glyphicon glyphicon-remove-sign"></span>
-                                    </button>
-                                </li>
-                            </ul>
+                        <div class='row'>
+                            <!-- SINGLE DAT ITINERARY ITEMS LIST -->
+                            <div class="itinerary">
+                                <div class="itinerary-item">
+                                    <h4>My Hotel</h4>
+                                    <ul class="itinerary-item-list">
+                                        <li>
+                                            Hotel Whatever
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="itinerary-item">
+                                    <h4>My Restaurants</h4>
+                                    <ul class="itinerary-item-list">
+                                        <li>
+                                            Potato Emporium
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            Chips and Stuff
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="itinerary-item">
+                                    <h4>My Activities</h4>
+                                    <ul class="itinerary-item-list">
+                                        <li>
+                                            Snortkelling
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            Doing Laudnry
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            Meditating
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
         </div>
     </div>
+
+    <!-- Map -->
 
 {% endblock %}

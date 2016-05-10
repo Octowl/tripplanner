@@ -1,31 +1,34 @@
+@mixin clearfix() {
+    &:after,
+    &:before {
+        clear: both;
+        display: block;
+        content: "";
+    }
+}
 body {
-  padding: 100px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
-
-.map{
+.map {
     border: black solid 3px;
 }
-
 .sidebar {
+    height: 100%;
+    float: right;
 }
-
-.options-panel{
+.options-panel {
     border: red dashed 3px;
 }
-
 .itinerary-container {
     border: green solid 3px;
 }
-
 .itinerary {
     border: orange dotted 3px;
 }
-
 .day-btns {
     border: purple dashed 3px;
 }
