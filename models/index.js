@@ -19,3 +19,4 @@ module.exports.Place = Place;
 module.exports.Hotel = Hotel;
 module.exports.Activity = Activity;
 module.exports.Restaurant = Restaurant;
+module.exports.db= db; 

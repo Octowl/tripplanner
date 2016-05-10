@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 
 function Activity(db) {
-    return db.define('place', {
+    return db.define('activity', {
         name: {
             type: Sequelize.STRING,
             allowNull: false

@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 
 function Hotel(db) {
-    return db.define('place', {
+    return db.define('hotel', {
         name: {
             type: Sequelize.STRING,
             allowNull: false

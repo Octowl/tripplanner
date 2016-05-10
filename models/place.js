@@ -19,7 +19,7 @@ function Place(db) {
             allowNull: false
         },
         location: {
-            type: Sequelize.ARRAY(Sequelize.FLOAT);
+            type: Sequelize.ARRAY(Sequelize.FLOAT),
             allowNull: false
         }
     });
