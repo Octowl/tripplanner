@@ -4,12 +4,14 @@
     <option value="{{hotel.name}}">{{hotel.name}}</option>
     {% endfor %}
 </select>
+
 <label for="restaurants">Restaurants</label>
 <select id="restaurants" name="Restaurants">
     {% for restaurant in restaurants %}
     <option value="{{restaurant.name}}">{{restaurant.name}}</option>
     {% endfor %}
 </select>
+
 <label for="activities">Activities</label>
 <select id="activities" name="Activities">
     {% for activity in activities %}
