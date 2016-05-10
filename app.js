@@ -16,8 +16,8 @@ swig.setDefaults({ cache: false });
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, './public')));
-app.use('/bootstrap', express.static(path.join(__dirname, '/bower_components/bootstrap/dist')));
-app.use('/jquery', express.static(path.join(__dirname, '/bower_components/jquery/dist')));
+app.use('/bootstrap', express.static(path.join(__dirname,'./bower_components/bootstrap/dist')));
+app.use('/jquery', express.static(path.join(__dirname, './bower_components/jquery/dist')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

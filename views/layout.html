@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Planner</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Our custom CSS -->
+    <link href='/stylesheets/main.css' rel='stylesheet'>
+
+  </head>
+
+  <body>
+      <!-- Nav-bar -->
+      <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+       <div class="container">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="/wiki">TripPlanner</a>
+         </div>
+         <div id="nav-items" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="/wiki/">index</a></li>
+             <li><a href="/wiki/add">write</a></li>
+             <li><a href="/users">users</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="container content">
+       {% block content %}{% endblock %}
+     </div>
+     <hr/>
+     <div id="footer" class="container text-muted">
+       TRIPPLANNER copyright Angel & Aziz
+     </div>
+
+      <script src="/jquery/jquery.min.js" ></script>
+      <script src="/bootstrap/js/bootstrap.min.js" ></script>
+  </body>
+</html>
