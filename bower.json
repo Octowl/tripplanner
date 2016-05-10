@@ -1,0 +1,21 @@
+{
+  "name": "tripplanner",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Angel & Aziz"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Octowl/tripplanner",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6"
+  }
+}
