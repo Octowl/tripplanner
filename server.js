@@ -6,15 +6,10 @@ var Promise = require('bluebird');
 
 server.on('request', require('./app'));
 
-Promise.all([
-  models.Place.sync(),
-  models.Hotel.sync(),
-  models.Restaurant.sync(),
-  models.Activity.sync()
-])
-.then(function () {
-  server.listen(3001, function () {
-    console.log('Server is listening on port 3001!');
-});
-})
-.catch(console.error);
+models.db.sync()
+    .then(function () {
+        server.listen(3001, function () {
+            console.log('Server is listening on port 3001!');
+        });
+    })
+    .catch(console.error);

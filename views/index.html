@@ -5,15 +5,15 @@
     <div class="container">
         <div class="row">
             <!-- MAP CONTAINER -->
-            <div id="map" class="container col-lg-8 map">
+            <div id="map" class="col-lg-8 map">
                 Map Placeholder
             </div>
 
             <!-- SIDEBAR CONTAINER -->
-            <div class='container col-lg-4 sidebar'>
+            <div class='col-lg-4 sidebar'>
                 <div class='row'>
                     <!-- OPTIONS SELECTOR PANEL -->
-                    <div class='container col-lg-12 options-panel'>
+                    <div class='col-lg-12 options-panel'>
                         <label for="hotels">Hotels</label>
                         <select id="hotels" name="Hotels">
                             {% for hotel in hotels %}
@@ -38,10 +38,10 @@
                 </div>
                 <div class='row'>
                     <!-- ITINERARY CONTAINER -->
-                    <div class="container col-lg-12 itinerary-container">
+                    <div class="col-lg-12 itinerary-container">
                         <div class='row'>
                             <!-- DAY SELECTION BUTTONS TOOLBAR -->
-                            <div class="day-btns btn-toolbar">
+                            <div class="day-btns btn-toolbar col-lg-12">
                                 <div class="btn-group">
                                     <!-- TODO: These need to be dynamic -->
                                     <button type="button" class="btn btn-default">1</button>
@@ -55,7 +55,7 @@
                         </div>
                         <div class='row'>
                             <!-- SINGLE DAT ITINERARY ITEMS LIST -->
-                            <div class="itinerary">
+                            <div class="itinerary col-lg-12">
                                 <div class="itinerary-item">
                                     <h4>My Hotel</h4>
                                     <ul class="itinerary-item-list">
